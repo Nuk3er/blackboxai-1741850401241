@@ -1,0 +1,242 @@
+/* Base styles */
+QMainWindow, QWidget {
+    background-color: #1a1a1a;
+    color: #ffffff;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+/* Tab Widget */
+QTabWidget::pane {
+    border: 1px solid #333333;
+    border-radius: 4px;
+    background-color: #1a1a1a;
+}
+
+QTabBar::tab {
+    background-color: #2d2d2d;
+    color: #ffffff;
+    padding: 8px 16px;
+    margin: 2px;
+    border: 1px solid #333333;
+    border-radius: 4px;
+}
+
+QTabBar::tab:selected {
+    background-color: #3700B3;
+    border-color: #6200EE;
+}
+
+QTabBar::tab:hover:!selected {
+    background-color: #404040;
+}
+
+/* Buttons */
+QPushButton {
+    background-color: #6200EE;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+QPushButton:hover {
+    background-color: #3700B3;
+}
+
+QPushButton:pressed {
+    background-color: #3700B3;
+    padding: 9px 15px 7px 17px;
+}
+
+QPushButton:disabled {
+    background-color: #666666;
+    color: #999999;
+}
+
+/* Progress Bar */
+QProgressBar {
+    border: 1px solid #333333;
+    border-radius: 4px;
+    text-align: center;
+    background-color: #2d2d2d;
+    min-height: 20px;
+}
+
+QProgressBar::chunk {
+    background-color: #6200EE;
+    border-radius: 3px;
+}
+
+/* Table Widget */
+QTableWidget {
+    background-color: #2d2d2d;
+    border: 1px solid #333333;
+    border-radius: 4px;
+    gridline-color: #333333;
+}
+
+QTableWidget::item {
+    padding: 5px;
+    border-bottom: 1px solid #333333;
+}
+
+QTableWidget::item:selected {
+    background-color: #3700B3;
+    color: white;
+}
+
+QHeaderView::section {
+    background-color: #1a1a1a;
+    color: white;
+    padding: 5px;
+    border: 1px solid #333333;
+}
+
+/* Text Inputs */
+QLineEdit, QTextEdit {
+    background-color: #2d2d2d;
+    border: 1px solid #333333;
+    border-radius: 4px;
+    padding: 5px;
+    color: white;
+}
+
+QLineEdit:focus, QTextEdit:focus {
+    border-color: #6200EE;
+}
+
+/* Combo Box */
+QComboBox {
+    background-color: #2d2d2d;
+    border: 1px solid #333333;
+    border-radius: 4px;
+    padding: 5px;
+    color: white;
+}
+
+QComboBox::drop-down {
+    border: none;
+    width: 20px;
+}
+
+QComboBox::down-arrow {
+    width: 12px;
+    height: 12px;
+}
+
+/* Spin Box */
+QSpinBox {
+    background-color: #2d2d2d;
+    border: 1px solid #333333;
+    border-radius: 4px;
+    padding: 5px;
+    color: white;
+}
+
+/* Group Box */
+QGroupBox {
+    border: 1px solid #333333;
+    border-radius: 4px;
+    margin-top: 1em;
+    padding-top: 1em;
+}
+
+QGroupBox::title {
+    color: white;
+    subcontrol-origin: margin;
+    subcontrol-position: top center;
+    padding: 0 5px;
+}
+
+/* Labels */
+QLabel {
+    color: white;
+}
+
+/* Scroll Bars */
+QScrollBar:vertical {
+    border: none;
+    background-color: #2d2d2d;
+    width: 10px;
+    margin: 0;
+}
+
+QScrollBar::handle:vertical {
+    background-color: #666666;
+    border-radius: 5px;
+    min-height: 20px;
+}
+
+QScrollBar::handle:vertical:hover {
+    background-color: #888888;
+}
+
+QScrollBar::add-line:vertical,
+QScrollBar::sub-line:vertical {
+    height: 0;
+}
+
+QScrollBar:horizontal {
+    border: none;
+    background-color: #2d2d2d;
+    height: 10px;
+    margin: 0;
+}
+
+QScrollBar::handle:horizontal {
+    background-color: #666666;
+    border-radius: 5px;
+    min-width: 20px;
+}
+
+QScrollBar::handle:horizontal:hover {
+    background-color: #888888;
+}
+
+QScrollBar::add-line:horizontal,
+QScrollBar::sub-line:horizontal {
+    width: 0;
+}
+
+/* Custom Widget States */
+QLabel[class="status-success"] {
+    color: #4CAF50;
+}
+
+QLabel[class="status-warning"] {
+    color: #FFC107;
+}
+
+QLabel[class="status-error"] {
+    color: #F44336;
+}
+
+QWidget[class="card"] {
+    background-color: #2d2d2d;
+    border-radius: 4px;
+    padding: 16px;
+    margin: 8px;
+}
+
+QLabel[class="header-text"] {
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 16px;
+}
+
+QLabel[class="section-title"] {
+    font-size: 16px;
+    font-weight: bold;
+    color: #BB86FC;
+    margin: 16px 0 8px 0;
+}
+
+QLabel[class="info-text"] {
+    color: #BB86FC;
+    font-style: italic;
+}
+
+/* Remove unsupported features */
+/* Note: QSS doesn't support animations or transitions */
